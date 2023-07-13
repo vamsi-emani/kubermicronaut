@@ -1,4 +1,4 @@
-# Pod restart emulation 
+## Emulation of Pod restart 
 
 A containerized micronaut application that exposes a /filecopy endpoint, when triggered multiple times 
 incrementally starves the pod of its resources (memory) and eventually makes the pod restart itself. 
