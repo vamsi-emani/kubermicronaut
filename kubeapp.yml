@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-backend
+spec:
+  selector:
+    matchLabels:
+      app: demo-backend
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: demo-backend
+    spec:
+      containers:
+        - name: demo-backend
+          image: kubermicronaut:latest
+          imagePullPolicy: Never
+          resources:
+            limits:
+              memory: "200Mi"
+          ports:
+            - containerPort: 8080

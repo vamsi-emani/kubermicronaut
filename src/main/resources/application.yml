@@ -1,0 +1,15 @@
+micronaut:
+  application:
+    name: kubermicronaut
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include=*:
+    health:
+      enabled: true
+      sensitive: false
+      details-visible: ANONYMOUS
+      url:
+        enabled: true
